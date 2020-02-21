@@ -1,0 +1,20 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 3.5rem;
+
+}
+
+.btn-group-lg .btn, .btn-lg {
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  margin: 1rem 0 0 0;
+}
+
+.amount{
+  padding: 0 0 0 12px;
+  max-width: 5rem;
+  max-height: 1.6rem;
+}

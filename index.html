@@ -6,24 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bitcoin Ticker</title>
     <script src="index.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link rel="icon" href="images/bitcoin.jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+  
+      </style>
+        <!-- Custom styles for this template -->
+      <link href="css/styles.css" rel="stylesheet">
+
 </head>
 <body>
-    <h1>Bitcoin Ticker</h1>
-    <form action="/" method="POST">
-        <select name="crypto">
-            <option value="bitcoin">Bitcoin</option>
-            <option value="ethereum">Ethereum</option>
-            <option value="litecoin">Litecoin</option>
-            <option value="ripple">XRP</option>
-        </select>
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Bitcoin Ticker</h1>
+                <form action="/" method="POST">
+                  
+                    <input class="amount " type="text" name="amount"  value=1 > 
+                        <select name="crypto">
+                            <option value="bitcoin">Bitcoin</option>
+                            <option value="ethereum">Ethereum</option>
+                            <option value="litecoin">Litecoin</option>
+                            <option value="ripple">XRP</option>
+                        </select>
+    
+                         <select name="fiat">
+                            <option value="USD">US Dollars</option>
+                            <option value="EUR">Euro</option>
+                            <option value="GBP">GB Pound</option>
+                            <option value="JPY">Japanese Yen</option>
+                        </select>
+                    
+                        <div>
+                            <button class="btn btn-primary btn-lg" type="submit" name="button">Calculate »</button>
+                        </div>
+                        
+                </form>     
+            <p class="mt-5 mb-3 text-muted">Bitcoin-Ticker © 2020</p> 
+        </div>
+    </div>
 
-        <select name="fiat">
-                <option value="USD">US Dollars</option>
-                <option value="EUR">Euro</option>
-                <option value="GBP">GB Pound</option>
-                <option value="JPY">Japanese Yen</option>
-            </select>
-            <button type="submit" name="button">Check</button>
-    </form>
 </body>
 </html>
