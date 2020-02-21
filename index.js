@@ -12,9 +12,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static("public"));
 
-app.get("/", (req,res)=> res.sendFile(__dirname + "/index.html"));
+app.get('/', (req,res)=> res.sendFile(__dirname + '/' +'index.html'));
 
-app.post("/", (req,res)=> {
+app.post('/', (req,res)=> {
     var crypto_value = req.body.crypto;
     var fiat_value = req.body.fiat;
     var amount = req.body.amount;
@@ -22,20 +22,20 @@ app.post("/", (req,res)=> {
     let value = 0;
     let price = "price_" +fiat_value.toLowerCase();
    
-   //original URL https://api.alternative.me/v1/ticker/bitcoin/?convert=USD
+   
 
-    var DinamiclURL = "https://api.alternative.me/v1/ticker/"+crypto_value+"/?convert="+fiat_value;
-        // var options = {  // optional for request method
-        //     url: "https://api.alternative.me/v1/ticker/"+crypto_value+"/",
-        //     method: "GET",
-        //     qs: {
-        //         convert: fiat_value
-        //     }
-        // };
+    //var DinamiclURL = "https://api.alternative.me/v1/ticker/"+crypto_value+"/?convert="+fiat_value;
+        var options = {  // optional for request method
+            url: "https://api.alternative.me/v1/ticker/"+crypto_value+"/?convert="+fiat_value,
+            method: "GET",
+            qs: {
+                convert: fiat_value
+            }
+        };
 
 
-    //   request(options,  => {
-    request(DinamiclURL, (error, response, body) => {
+    request(options,(error,response,body)  => {
+   // request(DinamiclURL, (error, response, body) => {
         if (error){
             console.log(error);
             res.send("We are having some issues with server conextion, please try later or contact with your provider");
