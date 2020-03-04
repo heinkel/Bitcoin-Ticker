@@ -63,5 +63,5 @@ app.post('/', (req,res)=> {
     
 });
 
-app.listen(port || 3001 , () => console.log(`Server is running on port ${port}.`));
+app.listen(port || 3001 , () => console.log(`Server is running on port ${port || 3001}.`));
 

@@ -36,6 +36,38 @@ body {
   user-select: none;
 }
 
+.overlay{
+  position: absolute;
+  z-index: 1; /* taking it to front over animation effect*/
+  height: 120vh; /*viewport height*/
+  width: 100%;
+  background: rgb(0, 0, 0,.9); /*black in 90% of transparency*/
+  place-content: center; /*content text should be in the middle this requires to call display :grid property*/
+  color: white;
+  display: none; /*display only activates if place-content 'center' is activated*/
+  opacity: 0;
+}
+
+.animate-overlay{
+  animation: overlay 3s forwards;
+}
+
+
+@keyframes overlay { 
+  0% {  /* time percentage*/
+      opacity: 0;    
+  }
+  30% {  
+      opacity: 1;
+  }
+  70% {  
+      opacity: 1;
+  }
+  100% {  
+      opacity: 0;
+  }
+} 
+
 .Sel{
   background-color: rgb(242, 169, 0) ;
   color:white;
